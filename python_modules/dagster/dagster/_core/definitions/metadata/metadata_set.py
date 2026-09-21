@@ -211,7 +211,7 @@ class TableMetadataSet(NamespacedMetadataSet):
         }
         try:
             table_name = TableMetadataSet.extract(metadata_subset).table_name
-            return table_name.lower() if table_name else None
+            return table_name if table_name else None
         except ValidationError:
             return None
 
