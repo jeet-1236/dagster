@@ -106,7 +106,7 @@ def build_column_schema_change_checks(
         if len(materialization_records) < 2:
             return True, "The asset has been materialized fewer than 2 times"
 
-        record, prev_record = materialization_records
+        prev_record, record = materialization_records
         metadata = cast("AssetMaterialization", record.asset_materialization).metadata
         prev_metadata = cast("AssetMaterialization", prev_record.asset_materialization).metadata
 
