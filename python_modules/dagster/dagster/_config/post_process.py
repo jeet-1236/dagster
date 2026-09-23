@@ -179,7 +179,7 @@ def _recurse_in_to_shape(
     # to us
     if context.config_type.kind == ConfigTypeKind.PERMISSIVE_SHAPE:
         defined_fields = fields.keys()
-        extra_fields = [field for field in incoming_fields if field not in defined_fields]
+        extra_fields = [field for field in incoming_fields if field in defined_fields]
         for extra_field in extra_fields:
             processed_fields[extra_field] = EvaluateValueResult.for_value(config_value[extra_field])
 
