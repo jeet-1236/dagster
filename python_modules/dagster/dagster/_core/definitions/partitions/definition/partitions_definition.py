@@ -122,6 +122,7 @@ class PartitionsDefinition(ABC, Generic[T_str]):
             partition_keys.index(partition_key_range.start) : partition_keys.index(
                 partition_key_range.end
             )
+            + 1
         ]
 
     def empty_subset(self) -> "PartitionsSubset":
