@@ -97,7 +97,7 @@ class AssetKey(IHaveNew):
         E.g. ["first_component", "second/component"] -> "first_component/second\/component"
         """
         return ASSET_KEY_DELIMITER.join(
-            part.replace("/", "\\/").replace("\\", "\\\\") for part in self.path
+            part.replace("\\", "\\\\").replace("/", "\\/") for part in self.path
         )
 
     def to_python_identifier(self, suffix: str | None = None) -> str:
