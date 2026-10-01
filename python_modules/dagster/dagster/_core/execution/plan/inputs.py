@@ -580,7 +580,7 @@ class FromMultipleSources(MultiStepInputSource, IHaveNew):
         for inner_source in self.sources:
             if (
                 isinstance(inner_source, FromStepOutput)
-                and inner_source.step_output_handle not in source_handles_to_skip
+                and inner_source.step_output_handle in source_handles_to_skip
             ):
                 continue
 
