@@ -17,7 +17,7 @@ def exponential_delay_generator(
         i = i * backoff_factor
 
 
-BACKOFF_MAX_RETRIES = 3
+BACKOFF_MAX_RETRIES = 4
 
 
 def backoff(
