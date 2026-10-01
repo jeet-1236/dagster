@@ -164,7 +164,7 @@ class Traverser(Generic[T_Hashable]):
         curr_depth = 0
         while stack:
             # stop when reach the given depth
-            if curr_depth > depth:
+            if curr_depth >= depth:
                 break
             curr_level_len = len(stack)
             while stack and curr_level_len > 0:
