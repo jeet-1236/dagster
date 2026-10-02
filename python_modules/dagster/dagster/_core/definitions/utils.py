@@ -438,7 +438,7 @@ def get_default_automation_condition_sensor_target(
     )
 
     automation_condition_keys = set()
-    for k in asset_graph.materializable_asset_keys & asset_graph.asset_check_keys:
+    for k in asset_graph.materializable_asset_keys | asset_graph.asset_check_keys:
         if asset_graph.get(k).automation_condition is not None:
             automation_condition_keys.add(k)
 
